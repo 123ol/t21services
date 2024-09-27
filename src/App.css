@@ -1,0 +1,60 @@
+.bg {
+  background-image: url(./assets/Group 18.png) ;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+ 
+}
+
+.genbg {
+  background-image: url(./assets/background PATTERN-1.svg) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+
+}
+
+.card1{
+  background-image: url(./assets/Background1.png) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}
+.card2{
+  background-image: url(./assets/Background3.png) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}
+.card3{
+  background-image: url(./assets/unsplash_glRqyWJgUeY.png) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}
+.card4{
+  background-image: url(./assets/Background2.png) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}
+
+.call{
+  background-image: url(./assets/Group1.svg) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+  
+}
+.footbg{
+  background-image: url(./assets/FooterBackground.svg) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}
+.pop{
+  background-image: url(./assets/POPUP.svg) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}

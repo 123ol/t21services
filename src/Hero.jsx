@@ -329,8 +329,11 @@ const Hero = () => {
     <label className="block text-sm font-semibold" htmlFor="service">Service (required)</label>
     <select id="service" className="w-full p-3 border border-[#DD9933] rounded-lg mt-1 focus:ring-2 focus:ring-yellow-500" required>
       <option>Select Service</option>
-      <option>Web Development</option>
-      <option>Mobile App Development</option>
+      <option>Application/Software Development</option>
+      <option>Educational Service</option>
+      <option>Training</option>
+      <option>Recruitment</option>
+      <option>Consultant Service</option>
     </select>
   </div>
 </div>
@@ -348,26 +351,7 @@ const Hero = () => {
       {/* Contact Info */}
       <div className="w-full lg:w-1/2 bg-white shadow-2xl min-h-[30rem] rounded-[50px] p-6 lg:p-6 mt-8 lg:mt-0">
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div className="bg-cover bg-center bg-no-repeat flex flex-col items-center text-center  w-full shadow-lg rounded-[50px] pb-4">
-      <img src={call3} alt='text' className='w-[100%] h-auto'/>
-        <div className=' max-w-[200px] '>
-        <p className="font-semibold mb-2 text-[#DD9933]">Call Us for Help!</p>
-        <div className='py-[0.5rem] rounded-3xl border border-[#DD9933]'>
-      <p className="text-gray-600 border-b-2 px-4 border-[#DD9933]">+44 20 3769 9081</p>
-      <p className="text-gray-600  px-4  ">+44 15 1301 4078</p>
-      </div>
-      </div>
-    </div>
-
-   <div className="bg-cover bg-center bg-no-repeat flex flex-col items-center text-center  w-full shadow-lg rounded-[50px] pb-4">
-      <img src={call2} alt='text' className='w-[100%] h-auto'/>
-      <div className='px-[1rem] max-w-[250px]'>
-    <p className="font-semibold text-[#DD9933]">Our Locations</p>
-    <div className='py-[0.5rem] rounded-3xl border border-[#DD9933]'>
-    <p className="text-gray-600 text-left border-b-2 px-4 border-[#DD9933]">Old St Lawrence School, Westminster Road, Liverpool.</p>
-    <p className='text-left text-gray-600 px-4 mt-2'>L4 3TQ.</p></div>
-    </div>
-  </div>
+   
 
   <div className="bg-cover bg-center bg-no-repeat flex flex-col items-center text-center  w-full shadow-lg rounded-[50px] pb-4">
       <img src={call5} alt='text' className='w-[100%] h-auto'/>
@@ -384,9 +368,41 @@ const Hero = () => {
      <div className='px-[1rem] max-w-[200px]'>
      <p className="font-semibold text-[#DD9933]">Official Timing</p>
      <div className='p-[0.5rem] rounded-t-3xl border border-[#DD9933]'>
-      <p className="text-gray-600">Mon-Sat 5:00 - 7:00</p>
+      <p className="text-gray-600">Mon-Sat.9:00am–6:00pm</p>
       </div>
     </div>
+    </div>
+   
+
+   <div className="bg-cover bg-center bg-no-repeat flex flex-col items-center text-center  w-full shadow-lg rounded-[50px] pb-4">
+      <img src={call2} alt='text' className='w-[100%] h-auto'/>
+      <div className='px-[1rem] max-w-[250px]'>
+    <p className="font-semibold text-[#DD9933]">Our Locations</p>
+    <div className='py-[0.5rem] rounded-3xl border border-[#DD9933]'>
+    <p className="text-gray-600 text-left border-b-2 px-4 border-[#DD9933]
+    ">
+      <span className='font-bold text-[#DD9933]'>Head office</span><br/>
+      Old St Lawrence School, Westminster Road, Liverpool.L4 3TQ.</p>
+    <p className='text-left text-gray-600 px-4 mt-2'> <span className='font-bold text-[#DD9933]'>ADO OFFICE</span> <br/>
+    No 68, Lino building opposite Crunchies eatery, Eksuth Area Similoluwa, Ado-Ekiti</p>
+    <p className='text-left text-gray-600 px-4 mt-2 border-t border-[#DD9933]'> <span className='font-bold text-[#DD9933]'>LAGOS OFFICE</span> <br/>
+    ICAN Building 5th floor, Yaba Lagos, Lagos State</p></div>
+    </div>
+  </div>
+  <div className="bg-cover bg-center bg-no-repeat flex flex-col items-center text-center  w-full shadow-lg rounded-[50px] pb-4 h-fit">
+      <img src={call3} alt='text' className='w-[100%] h-auto'/>
+        <div className=' max-w-[200px] '>
+        <p className="font-semibold mb-2 text-[#DD9933]">Call Us for Help!</p>
+        <div className='py-[0.5rem] rounded-3xl border border-[#DD9933]'>
+      <p className="text-gray-600 border-b-2 px-4 border-[#DD9933]">
+      <span className='font-bold text-[#DD9933]'>U.K line:</span> <br/>
+        +44 20 3769 9081 <br/> +44 15 1301 4078</p>
+      <p className="text-gray-600  px-4  "> 
+      <span className='font-bold text-[#DD9933]'>Nigeria line:</span> <br/>08163775394<br/>
+      09018095124
+      </p>
+      </div>
+      </div>
     </div>
   </div>
 </div>

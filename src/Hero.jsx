@@ -160,7 +160,7 @@ const Hero = () => {
     background: "linear-gradient(232.28deg, #DD9933 28.19%, #191919 100.01%)",
   }}
 >
-  <CountUp start={2} end={100} delay={0}>
+  <CountUp start={2} end={20} delay={0}>
     {({ countUpRef }) => (
       <div className="text-white flex flex-col items-center justify-center">
         <span

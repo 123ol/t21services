@@ -47,7 +47,7 @@ const Footer = () => {
               <hr/>
               <li className='py-2'><a href="#" className="text-white">Recruitment</a></li>
               <hr/>
-              <li className='py-2'><a href="#" className="text-white">Application/Software Creation</a></li>
+              <li className='py-2'><a href="#" className="text-white">Application/Software Development</a></li>
               <hr/>
               <li className='py-2'><a href="#" className="text-white">Earn With Us</a></li>
             </ul>

@@ -32,7 +32,7 @@ const services = [
     description: "Procure the appropriate applicants for your working staff without stress with us now!",
   },
   {
-    title: "Application/Software Creation",
+    title: "Application/Software Development",
     img: app,
     description: "Develop easy-to-use applications that make your business activities smoother with us today.",
   },
@@ -71,7 +71,7 @@ const Hero = () => {
   return (
     <div>
     <div className="flex flex-col md:flex-row mt-[95px] " id='home'>
-      <section className="bg-gradient-to-r from-[#f3f4f6] via-white to-[#feeeca] px-4 md:px-8 py-8 md:py-12 text-left md:w-1/2 genbg">
+      <section className=" px-4 md:px-8 py-8 md:py-12 text-left md:w-1/2 genbg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
           We{" "}
           <span className="decoration-4 inline-block px-4 py-2 border-2 border-[#fbbf24] rounded-full text-center">
@@ -128,7 +128,7 @@ const Hero = () => {
 )}
 
     </div>
-    <div className="relative w-full min-h-screen bg-gradient-to-r from-gray-100 to-white flex items-center justify-center genbg" id='services'>
+    <div className="relative w-full min-h-screen flex items-center justify-center genbg" id='services'>
       {/* Container for main content */}
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl w-full px-6 py-10">
         
@@ -187,7 +187,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-    <div className="w-full py-12 bg-gradient-to-r from-white to-yellow-100 genbg" id='Offer'>
+    <div className="w-full py-12  genbg" id='Offer'>
       {/* Heading Section */}
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-600">What We Offer</h2>
@@ -296,7 +296,7 @@ const Hero = () => {
      
       </div>
     </div>
-<div className=" py-10 lg:py-20 px-4 lg:px-10 bg-gradient-to-r from-gray-50 to-gray-100 genbg " id='Contact'>
+<div className=" py-10 lg:py-20 px-4 lg:px-10  genbg " id='Contact'>
 <h2 className="text-3xl lg:text-4xl font-bold text-[#191919] mb-4">Contact Us</h2>
 <p className="lg:text-[65px] mb-8 text-[65px] font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">Contact us at your finger tip.</p>
 

@@ -38,6 +38,12 @@
   background-repeat: no-repeat  !important;
   background-position: center  !important; 
 }
+.card5{
+  background-image: url(./assets/unsplash.png) !important;
+  background-size: cover  !important; 
+  background-repeat: no-repeat  !important;
+  background-position: center  !important; 
+}
 
 .call{
   background-image: url(./assets/Group1.svg) !important;
@@ -46,6 +52,8 @@
   background-position: center  !important; 
   
 }
+
+
 .footbg{
   background-image: url(./assets/FooterBackground.svg) !important;
   background-size: cover  !important; 

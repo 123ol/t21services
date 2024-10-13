@@ -1,140 +1,84 @@
-import  { useState, useEffect, useRef } from 'react';
+import  { useState } from 'react';
 import CountUp from "react-countup";
-import train from './assets/presentation_12691320 1.svg';
-import recrut from './assets/computer_3174076 1.svg';
-import app from './assets/innovation_8457528 1.svg';
-import edu from './assets/crowdfunding_1383302 1.svg';
-import arrow from './assets/Group 16.svg';
+
+
 import img from './assets/Group.svg'
 import card1 from './assets/risk-management_10789272 1.svg'
 import card2 from './assets/career_3174338 1.svg'
 import card3 from './assets/responsible_11502090 1.svg'
 import card4 from './assets/pin_1535715 1.svg'
-import Hcard4 from './assets/HoverDetails.svg'
-import Hcard1 from './assets/Hover Details (3).svg'
-import Hcard2 from './assets/Hover Details (2).svg'
-import Hcard3 from './assets/HoverDetails1.png'
+import Hcard4 from './assets/Hover Details (3).svg'
+import Hcard1 from './assets/Hover Details.svg'
+import Hcard2 from './assets/Hover Details (1).svg'
+import Hcard3 from './assets/Hover Details (2).svg'
+import Hcard5 from './assets/hover.svg'
 import call2 from './assets/Group2.png'
 import call5 from './assets/Group5.png'
 import call3 from './assets/Group3.png'
 import call4 from './assets/Group4.png'
-import popup from './assets/POPUP.svg'
+
 import { MdPlayArrow } from "react-icons/md";
-const services = [
-  {
-    title: "Training",
-    img: train,
-    description: "Get equipped for long-term performance and competitiveness in your career with our training!",
-  },
-  {
-    title: "Recruitment",
-    img: recrut,
-    description: "Procure the appropriate applicants for your working staff without stress with us now!",
-  },
-  {
-    title: "Application/Software Development",
-    img: app,
-    description: "Develop easy-to-use applications that make your business activities smoother with us today.",
-  },
-  {
-    title: "Educational Service",
-    img: edu,
-    description: "Acquire a perfectly tailored job for your tech skills & expertise and earn on the go.",
-  },
-];
+import FAQ from './FAQ';
+
 
 const Hero = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const popupRef = useRef();
 
-  const togglePopup = () => {
-    setIsPopupOpen(!isPopupOpen);
-  };
-
-  const handleClickOutside = (event) => {
-    if (popupRef.current && !popupRef.current.contains(event.target)) {
-      setIsPopupOpen(false);
+  const [faqs, setfaqs] = useState([
+    {
+      question: 'WHAT DO WE DO?',
+      answer: 'Through T21, individuals are trained and/or connected to their dream jobs, while helping companies and organizations achieve their business improvements and competitive strength.',
+      open: true
+    },
+    {
+      question: 'HOW DO WE GROW YOUR BUSINESS?',
+      answer: 'We Create your consumer-focused system or app with us, from conception and design through delivery, for the seamless functioning of your brand.',
+      open: false
+    },
+    {
+      question: 'HOW DO WE HELP YOU BUILD YOUR CAREER?',
+      answer: 'Whichever time you choose, our parts of making sure the best resources are available for you are 100% covered.',
+      open: false
+    },
+    {
+      question: 'HOW DO WE ENSURE YOUR SUCCESS?',
+      answer: 'Our recruitment patterns and other modes of operations are crafted in a way that you’ll easily get results; only your consent is needed to complete the Success Cycle for you.',
+      open: false
+    },
+    {
+      question: 'HOW DO WE HELP YOU FIND YOUR DREAM JOB?',
+      answer: 'Browse our catalogue, with numerous and custom jobs that best suit your field akin, to our offerings.',
+      open: false
+    },
+    {
+      question: 'WHO ARE WE?',
+      answer: 'We’re a UK-based multi-vertical agency that helps institutions and companies increase their unique performance and competence with IT solutions and Technologies.',
+      open: false
     }
-  };
+  ]);
 
-  useEffect(() => {
-    if (isPopupOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isPopupOpen]);
+  const toggleFAQ = index => {
+    setfaqs(faqs.map((faq, i) => {
+      if (i === index) {
+        faq.open = !faq.open
+      } else {
+        faq.open = false;
+      }
+
+      return faq;
+    }))
+  }
+
 
   return (
     <div>
-    <div className="flex flex-col md:flex-row mt-[95px] " id='home'>
-      <section className=" px-4 md:px-8 py-8 md:py-12 text-left md:w-1/2 genbg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-          We{" "}
-          <span className="decoration-4 inline-block px-4 py-2 border-2 border-[#fbbf24] rounded-full text-center">
-            Connect
-          </span>{" "}
-          Businesses to Greatness with Technology
-        </h1>
-        <p className="mt-4 text-lg text-gray-600">
-          At{" "} <span className='border-b-2 border-red-600'>T21</span> {" "},we’d give you the ease you desire in growing your personal
-          dreams, business workforce, and operations to the best possible level.
-        </p>
-        <button
-          onClick={togglePopup}
-          className="mt-6 bg-[#DD9933] text-white px-6 py-3 rounded-r-[2rem] font-semibold hover:bg-[#d19c1d] min-w-[240px]"
-        >
-          Explore
-        </button>
-      </section>
-
-      {/* Services Section */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 py-8 bg-gray-100 md:w-1/2 bg">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="relative bg-gradient-to-b from-[#ffffff] to-[#fdfdfd] rounded-t-[50px] rounded-b-[50px] text-black shadow-lg flex flex-col items-center text-center max-w-[260px] min-h-[270px] m-auto"
-          >
-            {/* Card Top Icon */}
-            <div className="rounded-[50px] w-full flex p-2 flex-col items-center justify-center shadow-md" style={{ background: 'linear-gradient(232.28deg, #DD9933 28.19%, #191919 100.01%)' }}>
-              <img src={service.img} alt={service.title} className="h-16 w-16 relative top-[-20px]" />
-              <h2 className="text-[17px] font-bold text-white">{service.title}</h2>
-            </div>
-
-            {/* Card Description */}
-            <div className="mt-4">
-              <p className="mt-4 text-[14px] font-medium text-black px-2">{service.description}</p>
-
-              {/* Discover More Button */}
-              <button className="mt-2 text-[#DD9933] m-auto flex gap-2 font-semibold py-2 px-4  items-center">
-                Discover More
-                <img src={arrow} alt='arrow' className="h-10 w-10" />
-              </button>
-            </div>
-          </div>
-        ))}
-      </section>
-
-     {/* Popup */}
-{isPopupOpen && (
-  <div className="fixed inset-0 bg-opacity-50 flex items-center justify-center">
-    <div ref={popupRef} className="bg-white/5 backdrop-blur-md p-2 rounded-lg shadow-lg max-w-lg">
-    <img src={popup} alt='arrow' className="h-auto w-[100%] z-[999999]" />
-    </div>
-  </div>
-)}
-
-    </div>
+  
     <div className="relative w-full min-h-screen flex items-center justify-center genbg" id='services'>
       {/* Container for main content */}
-      <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl w-full px-6 py-10">
+      <div className="flex flex-col md:flex-row mt-[5rem] justify-between items-center max-w-6xl gap-0 lg:gap-24 w-full px-6 py-10">
         
         {/* Left Side (Text Section) */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <div className="md:w-1/2 text-left">
+          <h1 className="text-4xl md:text-5xl  font-bold text-gray-800 mb-4">
             Welcome to <span className="bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">T21 services</span>
           </h1>
           <p className="text-lg text-gray-600 mb-4">
@@ -152,7 +96,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="relative md:w-1/2 mt-10 md:mt-0 ">
+        <div className="relative md:w-1/2 mt-0 md:mt-0 h-fit">
           
         <div
   className="relative z-10 top-40 w-32 h-32 rounded-full flex items-center justify-center"
@@ -197,19 +141,19 @@ const Hero = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
+      <div className="flex flex-wrap gap-6 max-w-6xl m-auto px-4 justify-center">
         
         {/* Card 1 */}
-        <div className="bg-white p-6 rounded-[100px] min-h-[350px] shadow-lg text-center card1 items-center justify-center grid overflow-hidden relative group">
+        <div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card1 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-[200px] w-[250px] p-4 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
       src={card1}
       alt="Service 2"
       className="w-[70px] h-[70px] object-cover rounded-lg mb-2 m-auto"
     />
     <p className="font-semibold text-lg mb-2 text-white text-center">
-      Avoid risks, increase your productivity, GROW your BUSINESS.
+    TRAINING
     </p>
   </div>
 
@@ -222,19 +166,16 @@ const Hero = () => {
   </div>
 </div>
 
-
-
-     {/* Card 2 */}
-<div className="bg-white p-6 rounded-[100px] min-h-[350px] shadow-lg text-center card2 items-center justify-center grid overflow-hidden relative group">
+<div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card2 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-[200px] w-[250px] p-4 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
-      src={card2}
+      src={card1}
       alt="Service 2"
       className="w-[70px] h-[70px] object-cover rounded-lg mb-2 m-auto"
     />
     <p className="font-semibold text-lg mb-2 text-white text-center">
-      It’s your CAREER, we only help you BUILD it.
+    RECRUITMENT
     </p>
   </div>
 
@@ -247,17 +188,19 @@ const Hero = () => {
   </div>
 </div>
 
-{/* Card 3 */}
-<div className="bg-white p-6 rounded-[100px] min-h-[350px] shadow-lg text-center card3 items-center justify-center grid overflow-hidden relative group">
+
+
+     {/* Card 2 */}
+<div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card3 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-[200px] w-[250px] p-4 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
-      src={card3}
+      src={card2}
       alt="Service 2"
       className="w-[70px] h-[70px] object-cover rounded-lg mb-2 m-auto"
     />
     <p className="font-semibold text-lg mb-2 text-white text-center">
-      Your READINESS with Our SERVICES = Your SUCCESS.
+    APPLICATION/SOFTWARE DEVELOPMENT
     </p>
   </div>
 
@@ -270,17 +213,17 @@ const Hero = () => {
   </div>
 </div>
 
-{/* Card 4 */}
-<div className="bg-white p-6 rounded-[90px] min-h-[350px] shadow-lg text-center card4 items-center justify-center grid overflow-hidden relative group">
+{/* Card 3 */}
+<div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card4 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-[200px] w-[250px] p-4 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
-      src={card4}
+      src={card3}
       alt="Service 2"
       className="w-[70px] h-[70px] object-cover rounded-lg mb-2 m-auto"
     />
     <p className="font-semibold text-lg mb-2 text-white text-center">
-      Find your dream job where it’s waiting for you.
+    EDUCATIONAL SERVICES
     </p>
   </div>
 
@@ -293,9 +236,39 @@ const Hero = () => {
   </div>
 </div>
 
+{/* Card 4 */}
+<div className="bg-white p-2 rounded-[90px] min-h-[350px] shadow-lg text-center card5 items-center justify-center grid overflow-hidden relative group">
+  {/* Upper Section */}
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+    <img
+      src={card4}
+      alt="Service 2"
+      className="w-[70px] h-[70px] object-cover rounded-lg mb-2 m-auto"
+    />
+    <p className="font-semibold text-lg mb-2 text-white text-center">
+    CONSULTANCY
+    </p>
+  </div>
+
+  {/* Hover Content */}
+  <div className="max-w-xs mx-auto shadow-lg px-2 text-center translate-y-[100%] group-hover:translate-y-[5%] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] content absolute bottom-0 left-0 right-0" >
+    {/* Icon Section */}
+    <div className="flex justify-center">
+      <img   src={Hcard5} alt="Icon" className="w-[100%] h-[100%]" />
+    </div>
+  </div>
+</div>
+
      
       </div>
     </div>
+    <div className="faqs genbg">
+    <p className="lg:text-5xl p-2  text-4xl text-center font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">Frequently Asked Questions</p>
+    <h2 className="text-2xl lg:text-2xl font-bold text-[#191919] text-center">Quick Answers to questions you may have about T21 Services</h2>
+        {faqs.map((faq, i) => (
+          <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ} />
+        ))}
+      </div>
 <div className=" py-10 lg:py-20 px-4 lg:px-10  genbg " id='Contact'>
 <h2 className="text-3xl lg:text-4xl font-bold text-[#191919] mb-4">Contact Us</h2>
 <p className="lg:text-[65px] mb-8 text-[65px] font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">Contact us at your finger tip.</p>

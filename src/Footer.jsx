@@ -9,7 +9,7 @@ import icon2 from "./assets/mail_7699157 1.png"
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-8 px-4 md:px-16 min-h-[450px] grid items-center footbg">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center m-auto">
         
         {/* Left Section - Company Info */}
         <div className="mb-8 md:mb-0">

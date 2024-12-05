@@ -28,12 +28,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 flex justify-between items-center p-6 shadow-md transition duration-300 ease-in-out ${
+      className={`fixed w-full top-0 z-50 flex justify-between items-center  m-auto p-6 shadow-md transition duration-300 ease-in-out ${
         scrolling ? 'bg-white/30 backdrop-blur-md' : ''
       }`}
     >
       {/* Logo */}
-      <div className="font-bold text-xl text-yellow-700 px-2">
+      <div className="font-bold text-xl m-auto text-yellow-700 px-2">
         <img src={logo} alt="Logo" className="w-14 h-14" />
       </div>
 
@@ -61,9 +61,7 @@ const Navbar = () => {
         <a href="#home" className="text-gray-800 border border-yellow-500 px-4 h-fit py-2 rounded-lg hover:text-yellow-600 hover:border-yellow-600 transition duration-300 ease-in-out">
           Home
         </a>
-        <a href="#services" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
-          What We Do
-        </a>
+    
         <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
           Who We Are
         </a>
@@ -77,7 +75,7 @@ const Navbar = () => {
           Gallery
         </a>
         <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
-          Projects
+          Testimony
         </a>
         <a href="#Contact" className="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out">
         Contact Us

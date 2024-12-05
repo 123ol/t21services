@@ -16,12 +16,10 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -82,10 +80,6 @@ const Navbar = () => {
       </a>
       </div>
 
-      {/* Contact Us Button */}
-   
-
-      {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-20 left-0 h-[70vh] w-full bg-white shadow-lg md:hidden rounded-br-[5rem]">
           <div className="flex flex-col items-center space-y-3  py-4">

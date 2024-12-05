@@ -61,16 +61,16 @@ const Footer = () => {
               <li className='py-2 flex gap-4 '>
               <img src={icon1} alt="Company Logo" className="w-[40px] mt-2 h-[40px]  flex items-center" />
               <div className=''>
-                <span className="block text-gray-400">London</span>
-                <span className="block text-white">020 3375 2061</span>
+                <span className="block text-gray-400">U.K</span>
+                <span className="block text-white">+44 20 3769 9081</span>
                 </div>
               </li>
               <hr/>
               <li className='py-2 flex gap-4 '>
               <img src={icon1} alt="Company Logo" className="w-[40px] mt-2 h-[40px]  flex items-center"/>
               <div className=''>
-                <span className="block text-gray-400">Manchester</span>
-                <span className="block text-white">0151 215 4873</span>
+                <span className="block text-gray-400">Nigeria</span>
+                <span className="block text-white">+2348163775394</span>
                 </div>
               </li>
               <hr/>
@@ -78,7 +78,7 @@ const Footer = () => {
               <img src={icon2} alt="Company Logo" className="w-[40px] mt-2 h-[40px]  flex items-center" />
               <div className=''>
                 <span className="block text-gray-400">Email</span>
-                <span className="block text-white">info@xyzservices.co.uk</span></div>
+                <span className="block text-white">info@t21services.co.uk</span></div>
               </li>
               <hr/>
             </ul>

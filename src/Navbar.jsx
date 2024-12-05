@@ -73,7 +73,7 @@ const Navbar = () => {
           Gallery
         </a>
         <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
-          Testimony
+          Testimonials
         </a>
         <a href="#Contact" className="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out">
         Contact Us
@@ -86,10 +86,7 @@ const Navbar = () => {
             <a href="#home" className="text-gray-800 px-4 py-2 hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Home
             </a>
-            <hr className="bg-black h-[1px] w-[90%]"/>
-            <a href="#services" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600  transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
-              What We Do
-            </a>
+         
             <hr className="bg-black h-[1px] w-[90%]"/>
             <a href="#" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600  transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Who We Are
@@ -108,7 +105,7 @@ const Navbar = () => {
             </a>
             <hr className="bg-black h-[1px] w-[90%]"/>
             <a href="#" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
-              Projects
+            Testimonials
             </a>
             <hr className="bg-black h-[1px] w-[90%] "/>
             <a href="#Contact" className="bg-yellow-600 text-white w-[80%] text-center px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>

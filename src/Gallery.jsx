@@ -15,7 +15,7 @@ const images = [
 
 const MasonryGrid = () => {
   return (
-    <div className="px-4 py-40">
+    <div className="px-4 py-40 genbg">
 
       <h1  className="text-2xl font-semibold  md:text-4xl bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text text-center my-8" >T21 Grid</h1>
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">

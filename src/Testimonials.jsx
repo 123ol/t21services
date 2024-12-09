@@ -43,7 +43,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="py-40 px-8 text-black">
+    <div className="py-40 px-8 text-black genbg" >
       {/* Section Header */}
       <header className="text-center mb-8">
         <h1 className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">What Clients Say</h1>

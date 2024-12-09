@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 md:flex-row items-center justify-between max-w-[1500px]  mx-auto py-40 px-8">
+    <div className="flex flex-col gap-10 md:flex-row items-center justify-between max-w-[1500px]  mx-auto py-40 px-8 genbg">
       {/* Left Section: Form */}
       <div className=" space-y-6 ">
         <h1 className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">

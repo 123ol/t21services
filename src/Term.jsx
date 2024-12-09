@@ -50,7 +50,7 @@ const experts = [
 
 const Term = () => {
   return (
-    <div className="bg-white py-40 lg:px-32 px-5">
+    <div className="bg-white py-40 lg:px-32 px-5 genbg">
       <h2 className="text-2xl md:text-4xl font-semibold text-center bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text mb-6">
         Meet Our Experts
       </h2>

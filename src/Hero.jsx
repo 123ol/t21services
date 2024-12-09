@@ -144,9 +144,9 @@ const Hero = () => {
       <div className="flex flex-wrap gap-6 max-w-6xl m-auto px-4 justify-center">
         
         {/* Card 1 */}
-        <div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card1 items-center justify-center grid overflow-hidden relative group">
+        <div className="bg-white p-2 rounded-[70px] max-h-[350px] min-h-[300px] shadow-lg text-center card1 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit min-h-[150px] w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0 items-center block">
     <img
       src={card1}
       alt="Service 2"
@@ -166,9 +166,9 @@ const Hero = () => {
   </div>
 </div>
 
-<div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card2 items-center justify-center grid overflow-hidden relative group">
+<div className="bg-white p-2 rounded-[70px] max-h-[350px] min-h-[300px]  shadow-lg text-center card2 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] min-h-[150px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
       src={card1}
       alt="Service 2"
@@ -191,9 +191,9 @@ const Hero = () => {
 
 
      {/* Card 2 */}
-<div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card3 items-center justify-center grid overflow-hidden relative group">
+<div className="bg-white p-2 rounded-[70px] max-h-[350px] min-h-[300px]  shadow-lg text-center card3 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit min-h-[150px] w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
       src={card2}
       alt="Service 2"
@@ -214,9 +214,9 @@ const Hero = () => {
 </div>
 
 {/* Card 3 */}
-<div className="bg-white p-2 rounded-[100px] min-h-[350px] shadow-lg text-center card4 items-center justify-center grid overflow-hidden relative group">
+<div className="bg-white p-2 rounded-[70px] max-h-[350px] min-h-[300px]  shadow-lg text-center card4 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] min-h-[150px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
       src={card3}
       alt="Service 2"
@@ -237,9 +237,9 @@ const Hero = () => {
 </div>
 
 {/* Card 4 */}
-<div className="bg-white p-2 rounded-[90px] min-h-[350px] shadow-lg text-center card5 items-center justify-center grid overflow-hidden relative group">
+<div className="bg-white p-2 rounded-[70px] min-h-[300px]  max-h-[350px]shadow-lg text-center card5 items-center justify-center grid overflow-hidden relative group">
   {/* Upper Section */}
-  <div className="bg-white/10 backdrop-blur-md rounded-[50px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+  <div className="bg-white/10 backdrop-blur-md rounded-[50px] min-h-[150px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
     <img
       src={card4}
       alt="Service 2"
@@ -331,7 +331,7 @@ const Hero = () => {
     <div className='px-[1rem] max-w-[200px]'>
     <p className="font-semibold text-[#DD9933]">Our Mail Address</p>
     <div className='p-[0.5rem] rounded-t-3xl  border border-[#DD9933]'>
-      <p className="text-gray-600">info@starview.co.uk</p>
+      <p className="text-gray-600">info@t21services.co.uk</p>
       </div>
       </div>
     </div>

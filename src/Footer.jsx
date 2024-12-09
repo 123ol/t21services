@@ -14,7 +14,7 @@ const Footer = () => {
         {/* Left Section - Company Info */}
         <div className="mb-8 md:mb-0">
           <img src={logo} alt="Company Logo" className="mb-4 w-[50px]" /> {/* Add your company logo */}
-          <p className="mb-4 text-white w-[350px]">
+          <p className="mb-4 text-white w-[350px] ">
           We’re a UK-based multi-vertical agency that helps institutions and companies increase their unique performance and competence with IT solutions and Technologies.
           </p>
           <div className="flex space-x-4">

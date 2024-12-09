@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import logo from './assets/T21LOGO.svg';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(() => localStorage.getItem('activeLink') || '/');
 
   // Add event listener to track scrolling
   useEffect(() => {
@@ -20,8 +21,15 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('activeLink', activeLink);
+  }, [activeLink]);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
   };
 
   return (
@@ -56,41 +64,64 @@ const Navbar = () => {
 
       {/* Nav Links for Desktop */}
       <div className="hidden md:flex space-x-4">
-        <a href="#home" className="text-gray-800 border border-yellow-500 px-4 h-fit py-2 rounded-lg hover:text-yellow-600 hover:border-yellow-600 transition duration-300 ease-in-out">
+        <Link to="/"   className={`text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-black h-fit hover:border-yellow-600 transition duration-300 ease-in-out ${
+            activeLink === '/' ? 'bg-yellow-600 text-white' : ''
+          }`}
+          onClick={() => handleLinkClick('/')}
+        >
           Home
-        </a>
+        </Link>
     
-        <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
+        <Link to='/WhoWeAre'       className={`text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-black h-fit hover:border-yellow-600 transition duration-300 ease-in-out ${
+            activeLink === '/WhoWeAre' ? 'bg-yellow-600 text-white' : ''
+          }`}
+          onClick={() => handleLinkClick('/WhoWeAre')}
+        >
           Who We Are
-        </a>
+        </Link>
         <a href="#Offer" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
           What We Offer
         </a>
-        <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
+        <Link to="/term"   className={`text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-black h-fit hover:border-yellow-600 transition duration-300 ease-in-out ${
+            activeLink === '/term' ? 'bg-yellow-600 text-white' : ''
+          }`}
+          onClick={() => handleLinkClick('/term')}
+        >
           Meet Our Team
-        </a>
-        <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
+        </Link>
+        <Link to='/gallery'       className={`text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-black h-fit hover:border-yellow-600 transition duration-300 ease-in-out ${
+            activeLink === '/gallery' ? 'bg-yellow-600 text-white' : ''
+          }`}
+          onClick={() => handleLinkClick('/gallery')}
+        >
           Gallery
-        </a>
-        <a href="#" className="text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-yellow-600 h-fit hover:border-yellow-600 transition duration-300 ease-in-out">
+        </Link>
+        <Link to="/testimonials"   className={`text-gray-800 border border-yellow-500 px-4 py-2 rounded-lg hover:text-black h-fit hover:border-yellow-600 transition duration-300 ease-in-out ${
+            activeLink === '/testimonials' ? 'bg-yellow-600 text-white' : ''
+          }`}
+          onClick={() => handleLinkClick('/testimonials')}
+        >
           Testimonials
-        </a>
-        <a href="#Contact" className="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out">
+        </Link>
+        <Link to="/contact" className={`bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out${
+            activeLink === '/contact' ? 'bg-yellow-600 text-white' : ''
+          }`}
+          onClick={() => handleLinkClick('/contact')}>
         Contact Us
-      </a>
+      </Link>
       </div>
 
       {isMobileMenuOpen && (
         <div className="absolute top-20 left-0 h-[70vh] w-full bg-white shadow-lg md:hidden rounded-br-[5rem]">
           <div className="flex flex-col items-center space-y-3  py-4">
-            <a href="#home" className="text-gray-800 px-4 py-2 hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
+          <Link to='/'  className="text-gray-800 px-4 py-2 hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Home
-            </a>
+            </Link>
          
             <hr className="bg-black h-[1px] w-[90%]"/>
-            <a href="#" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600  transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
+            <Link to='/WhoWeAre' className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600  transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Who We Are
-            </a>
+            </Link>
             <hr className="bg-black h-[1px] w-[90%]"/>
             <a href="#Offer" className="text-gray-800  py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               What We Offer
@@ -100,9 +131,9 @@ const Navbar = () => {
               Meet Our Team
             </a>
             <hr className="bg-black h-[1px] w-[90%]"/>
-            <a href="#" className="text-gray-800 px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
+            <Link to='/gallery'  className="text-gray-800 px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Gallery
-            </a>
+            </Link>
             <hr className="bg-black h-[1px] w-[90%]"/>
             <a href="#" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
             Testimonials

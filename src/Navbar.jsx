@@ -127,21 +127,21 @@ const Navbar = () => {
               What We Offer
             </a>
             <hr className="bg-black h-[1px] w-[90%]"/>
-            <a href="#" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600  transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
+            <Link to='/term' className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600  transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Meet Our Team
-            </a>
+            </Link>
             <hr className="bg-black h-[1px] w-[90%]"/>
             <Link to='/gallery'  className="text-gray-800 px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Gallery
             </Link>
             <hr className="bg-black h-[1px] w-[90%]"/>
-            <a href="#" className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
+            <Link to='/testimonials' className="text-gray-800  px-4 py-2 rounded-lg hover:text-yellow-600 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
             Testimonials
-            </a>
+            </Link>
             <hr className="bg-black h-[1px] w-[90%] "/>
-            <a href="#Contact" className="bg-yellow-600 text-white w-[80%] text-center px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
+            <Link to='/contact' className="bg-yellow-600 text-white w-[80%] text-center px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300 ease-in-out" onClick={toggleMobileMenu}>
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       )}

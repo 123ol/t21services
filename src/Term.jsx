@@ -55,7 +55,7 @@ const Term = () => {
         Meet Our Experts
       </h2>
       <p className="text-center max-w-[40rem] mx-auto text-gray-600 mb-8">
-        We're united by a passion for innovation and a shared commitment to transform financial services and unlock the economic potential of emerging markets.
+        We're united by a passion for innovation and a shared commitment to transform Tech services and unlock the Tech potential of emerging the world.
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 ">
         {experts.map((expert, index) => (

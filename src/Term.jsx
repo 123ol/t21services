@@ -1,7 +1,8 @@
 
 import img from "./assets/img1.jpg";
 import img2 from "./assets/img4.jpg"
-import img6 from "./assets/img4.jpg"
+import img3 from "./assets/mic.jpg"
+import img6 from "./assets/dot.jpg"
 import img4 from "./assets/img4.jpg"
 import img5 from "./assets/img5.jpg"
 import icon1 from './assets/pajamas_twitter.png'
@@ -23,6 +24,13 @@ const experts = [
     fbLink: '#',
     linkedinLink: '#',
   },
+  {
+    name: 'Micheal Soetan',
+    role: 'Regional manager',
+    image: img3,
+    fbLink: '#',
+    linkedinLink: '#',
+  },
 
   {
     name: 'Fatoba Olumide',
@@ -39,7 +47,7 @@ const experts = [
     linkedinLink: '#',
   },
   {
-    name: 'dotun',
+    name: 'Adetiba Adedotun',
     role: 'UI Designer',
     image: img6,
     fbLink: '#',

@@ -1,6 +1,6 @@
-import React from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
@@ -31,6 +31,8 @@ const Testimonials = () => {
       image: img,
       name: "Jane Smith",
       description: "Business Owner",
+      type: "video", // Video testimonial
+      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Example video URL
     },
     {
       id: 4,
@@ -43,7 +45,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="py-40 px-8 text-black genbg" >
+    <div className="py-40 px-8 text-black genbg">
       {/* Section Header */}
       <header className="text-center mb-8">
         <h1 className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">What Clients Say</h1>
@@ -51,27 +53,56 @@ const Testimonials = () => {
 
       {/* Swiper Component */}
       <Swiper
-        pagination={{ type: "fraction" }}
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
-        loop={false} // Prevents looping to avoid more slides than expected
       >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div className="w-full sm:w-[450px] md:w-[500px] lg:w-[600px] m-auto p-6 border-2 border-[#DD9933] rounded-[2rem]  shadow-lg">
+            <div className="w-full sm:w-[450px] md:w-[500px] lg:w-[600px] m-auto p-6 border-2 border-[#DD9933] rounded-[2rem] shadow-lg">
               <div className="flex items-center mb-4">
                 <FaQuoteLeft className="text-yellow-400 text-4xl mr-4" />
-                <h2 className="text-2xl font-semibold  md:text-4xl bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">{testimonial.quote}</h2>
+                <h2 className="text-2xl font-semibold md:text-4xl bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">{testimonial.quote}</h2>
               </div>
               <p className="text-gray-800 text-sm mb-4">{testimonial.text}</p>
-              <div className="flex space-x-1">
-                {Array(5)
-                  .fill(0)
-                  .map((_, index) => (
-                    <FaStar key={index} className="text-yellow-400 text-lg" />
-                  ))}
-              </div>
+
+              {/* Render video only if it's a video testimonial */}
+              {testimonial.type === "video" && (
+                <div className="mb-4">
+                  <iframe
+                    width="100%"
+                    height="250"
+                    src={testimonial.videoUrl}
+                    title="Video testimonial"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )}
+
+              {testimonial.type === "text" && (
+                <>
+                  <p className="text-gray-400 text-sm mb-4">{testimonial.text}</p>
+                  <div className="flex space-x-1 h-fit">
+                    {Array(5)
+                      .fill(0)
+                      .map((_, index) => (
+                        <FaStar key={index} className="text-yellow-400 text-lg" />
+                      ))}
+                  </div>
+                </>
+              )}
+
               <div className="flex items-center mt-6">
                 <img
                   src={testimonial.image}
@@ -91,16 +122,17 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
       <style jsx>{`
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #ffcc00; /* Change to your desired color */
-  }
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    color: #ff9900; /* Optional: Change color on hover */
-  }
-`}</style>
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #ffcc00; /* Change to your desired color */
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          color: #ff9900; /* Optional: Change color on hover */
+        }
+      `}</style>
     </div>
   );
 };

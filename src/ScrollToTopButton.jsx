@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-
 import logo from './assets/ScrollUP.png';
+
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,9 +33,9 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-[-15px] p-3  shadow-lg transition-opacity duration-300 hover:scale-105"
+          className="fixed bottom-10 z-50 right-2 sm:right-2 md:right-2 p-3  transition-transform duration-300 hover:scale-105"
         >
-         <img src={logo} alt="Logo" className="w-14 h-14" />
+          <img src={logo} alt="Scroll to top" className="w-12 h-12 sm:w-14 sm:h-14" />
         </button>
       )}
     </div>

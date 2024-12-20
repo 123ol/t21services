@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Gallery from "./Gallery";
 import Testimonials from "./Testimonials";
-
+import ScrollToTop from './ScrollToTop';
 import Footer from "./Footer"
 import  ScrollToTopButton from './ScrollToTopButton'
 import { Routes, Route } from 'react-router-dom'; // Only import Routes and Route
@@ -15,10 +15,12 @@ import Contact from "./Contact";
 
 function App() {
   return (
-    <>
+    <div className="overflow-hidden">
+      <ScrollToTop />
       <Navbar />
       
       <Routes>
+        
         <Route path="/" element={<Hero />} />
         <Route path="/WhoWeAre" element={<About />} />
         <Route path="/gallery" element={<Gallery />} />
@@ -28,7 +30,7 @@ function App() {
       </Routes>
       <ScrollToTopButton />
       <Footer/>
-    </>
+    </div>
   );
 }
 

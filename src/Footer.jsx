@@ -1,7 +1,7 @@
 
 import logo from "./assets/T21LOGO.svg"
 import logo1 from "./assets/icon _Facebook icon_.png"
-import logo2 from "./assets/icon _circle twitterbird_.png"
+import logo2 from "./assets/icon _instagram with circle icon_.png"
 import logo3 from "./assets/icon _circle twitterbird_.png"
 import logo4 from "./assets/icon _circle linkedin_.png"
 import icon1 from "./assets/telephone-call_3059561 1.png"
@@ -19,16 +19,16 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             {/* Social Media Icons */}
-            <a href="#" className="text-white">
+            <a href="https://www.facebook.com/T21Services" className="text-white">
             <img src={logo1} alt="Company Logo" className="mb-4 w-[30px]" />
             </a>
-            <a href="#" className="text-white">
+            <a href="https://www.instagram.com/t21_services/" className="text-white">
             <img src={logo2} alt="Company Logo" className="mb-4 w-[30px]" />
             </a>
-            <a href="#" className="text-white">
+            <a href="https://x.com/T21_Services" className="text-white">
             <img src={logo3} alt="Company Logo" className="mb-4 w-[30px]" />
             </a>
-            <a href="#" className="text-white">
+            <a href="https://www.linkedin.com/company/t21-services/posts/?feedView=all" className="text-white">
             <img src={logo4} alt="Company Logo" className="mb-4 w-[30px]" />
             </a>
           </div>

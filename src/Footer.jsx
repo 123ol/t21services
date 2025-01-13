@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="mb-8 md:mb-0">
           <img src={logo} alt="Company Logo" className="mb-4 w-[50px]" /> {/* Add your company logo */}
           <p className="mb-4 text-white w-[350px] ">
-          We’re a UK-based multi-vertical agency that helps institutions and companies increase their unique performance and competence with IT solutions and Technologies.
+          Empowering Africa Through Innovation and Excellence.T21 Services Nigeria is part of the global T21 Services brand, delivering professional development, consultancy, education, software solutions, and digital services tailored for Africa’s future.
           </p>
           <div className="flex space-x-4">
             {/* Social Media Icons */}

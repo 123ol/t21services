@@ -9,7 +9,7 @@ const About = () => {
           <div className="text-left w-full lg:w-1/2 mt-12">
             <h2 className="text-5xl font-extrabold bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">ABOUT T21</h2>
             <p className="mt-4 text-gray-700 text-lg ">
-              We deliver creative training & teaching programs, covering numerous sectors and industries, that are personalized to suit your requirements as being one of the leading companies in specialized training offerings.
+            Who We AreT21 Services Nigeria is the primary branch of the globally recognized T21 Services, dedicated to Africa’s development. We specialize in training, consultancy, capacity building, recruitment, digital transformation, software and application development, and education services, offering cutting-edge solutions tailored to the unique needs of the Nigerian and African markets.   <br/> Our expertise combines local relevance with global standards, ensuring that every service we offer transforms careers, businesses, and communities.
             </p>
             <p className="mt-4 text-gray-700 text-lg ">
               Our programs are available as face-to-face and virtual training, ensuring that your training goals are met no matter where you are. Professionals create our programs to help institutions and companies increase personal competencies and skills, which are vital instruments for long-term corporate growth and improvement.

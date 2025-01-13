@@ -81,13 +81,18 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl  font-bold text-gray-800 mb-4">
             Welcome to <span className="bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">T21 services</span>
           </h1>
-          <p className="text-lg text-gray-600 mb-4">
-            We’re a UK-based multi-vertical agency that helps institutions and companies increase their unique performance and competence with IT solutions and Technologies.
+          <p className="text-lg text-gray-600 mb-2">
+          Empowering Africa’s professionals and businesses with world-class training, consultancy, and innovative solutions. At T21 Services Nigeria, we serve as the hub for our pan-African vision, bridging global opportunities and local expertise, offering tailored services to meet the unique needs of individuals and organizations across the continent.
           </p>
-          <p className="text-gray-600 mb-6">
-            We help proffer solutions to your business problems relating to recruitment needs, training necessities, outsourcing/delegation of tasks and creating software to smoothen your daily business operations.
+          <p className="text-lg text-gray-600 mb-2">
+          Our MissionTo empower individuals and businesses across Africa with the skills, tools, and resources necessary to thrive in a competitive global market.
           </p>
-          
+          <p className="text-lg text-gray-600 mb-2">
+          Our VisionTo be the leading provider of innovative training, consultancy, and professional development services in Africa, fostering growth and excellence that positions the continent as a global leader in diverse sectors.
+          </p>
+          <p className="text-lg text-gray-600 mb-2">
+          Explore Our ServicesT21 Services Nigeria serves as the gateway to all T21 Services offerings, enabling seamless navigation to our global services tailored for Africa’s growing needs.
+          </p>
           {/* Button */}
           <div className="mt-4">
             <button className="bg-[#DD9933] flex gap-2 text-white px-4 py-3 text-sm transition" style={{ borderRadius: "45px 50px 50px 0px" }}>

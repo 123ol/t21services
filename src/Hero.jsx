@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CountUp from "react-countup";
-
+import { Link } from 'react-router-dom';
 import img from "./assets/Group.svg";
 import card1 from "./assets/risk-management_10789272 1.svg";
 import card2 from "./assets/career_3174338 1.svg";
@@ -113,13 +113,14 @@ T21 Services Nigeria is your gateway to a comprehensive suite of services powere
             </p>
             {/* Button */}
             <div className="mt-4">
+              <Link to="/WhoWeAre">
               <button
                 className="bg-[#DD9933] flex gap-2 text-white px-4 py-3 text-sm transition"
                 style={{ borderRadius: "45px 50px 50px 0px" }}
               >
                 Check details about our company{" "}
                 <MdPlayArrow className="bg-white  text-black w-4 h-4 rounded-[50%]" />
-              </button>
+              </button></Link>
             </div>
           </div>
 

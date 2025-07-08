@@ -202,9 +202,10 @@ T21 Services Nigeria is your gateway to a comprehensive suite of services powere
             {/* Hover Content */}
             <div className="max-w-xs mx-auto shadow-lg px-2 text-center translate-y-[100%] group-hover:translate-y-[5%] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] content absolute bottom-0 left-0 right-0">
               {/* Icon Section */}
+              <a href="https://recruitment.t21services.co.uk/">
               <div className="flex justify-center">
                 <img src={Hcard2} alt="Icon" className="w-[100%] h-[100%]" />
-              </div>
+              </div></a>
             </div>
           </div>
 
@@ -225,9 +226,10 @@ T21 Services Nigeria is your gateway to a comprehensive suite of services powere
             {/* Hover Content */}
             <div className="max-w-xs mx-auto shadow-lg px-2 text-center translate-y-[100%] group-hover:translate-y-[5%] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] content absolute bottom-0 left-0 right-0">
               {/* Icon Section */}
+              <a href="https://app.t21services.co.uk/">
               <div className="flex justify-center">
                 <img src={Hcard3} alt="Icon" className="w-[100%] h-[100%]" />
-              </div>
+              </div></a>
             </div>
           </div>
 
@@ -248,9 +250,10 @@ T21 Services Nigeria is your gateway to a comprehensive suite of services powere
             {/* Hover Content */}
             <div className="max-w-xs mx-auto shadow-lg px-2 text-center translate-y-[100%] group-hover:translate-y-[5%] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] content absolute bottom-0 left-0 right-0">
               {/* Icon Section */}
+              <a href="https://www.t21services.co.uk/">
               <div className="flex justify-center">
                 <img src={Hcard4} alt="Icon" className="w-[100%] h-[100%]" />
-              </div>
+              </div></a>
             </div>
           </div>
 
@@ -271,9 +274,10 @@ T21 Services Nigeria is your gateway to a comprehensive suite of services powere
             {/* Hover Content */}
             <div className="max-w-xs mx-auto shadow-lg px-2 text-center translate-y-[100%] group-hover:translate-y-[5%] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] content absolute bottom-0 left-0 right-0">
               {/* Icon Section */}
+               <a href="https://www.t21services.co.uk/">
               <div className="flex justify-center">
                 <img src={Hcard5} alt="Icon" className="w-[100%] h-[100%]" />
-              </div>
+              </div></a>
             </div>
           </div>
         </div>

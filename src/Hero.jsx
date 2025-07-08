@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <div>
       <div
-        className="relative w-full min-h-screen flex items-center justify-center genbg"
+        className="relative w-full min-h-screen flex items-center justify-center genbg pt-10"
         id="services"
       >
         {/* Container for main content */}
@@ -86,32 +86,30 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl  font-bold text-gray-800 mb-4">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-[#DD9933] to-[#191919] text-transparent bg-clip-text">
-                T21 services
+           T21 Services Nigeria
               </span>
             </h1>
-            <p className="text-lg text-gray-600 mb-2">
-              Empowering Africa’s professionals and businesses with world-class
-              training, consultancy, and innovative solutions. At T21 Services
-              Nigeria, we serve as the hub for our pan-African vision, bridging
-              global opportunities and local expertise, offering tailored
-              services to meet the unique needs of individuals and organizations
-              across the continent.
+                <p className="text-lg font-bold text-gray-600 mb-2">
+           Africa’s Gateway to Global Excellence in Human Capital, Technology, and Enterprise Growth
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              Our MissionTo empower individuals and businesses across Africa
-              with the skills, tools, and resources necessary to thrive in a
-              competitive global market.
+            T21 Services Nigeria is the West African anchor of the global T21 Services brand a dynamic force driving innovation, talent development, and digital transformation across the continent.
+We are more than a service provider we are a strategic enabler, building the capabilities of Africa’s people and institutions through bespoke training, consultancy, and digital solutions tailored to regional needs and global standards.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              Our VisionTo be the leading provider of innovative training,
-              consultancy, and professional development services in Africa,
-              fostering growth and excellence that positions the continent as a
-              global leader in diverse sectors.
+             Our work empowers individuals to become globally competitive professionals, supports enterprises to scale with confidence, and equips institutions to lead in a fast-evolving world.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              Explore Our ServicesT21 Services Nigeria serves as the gateway to
-              all T21 Services offerings, enabling seamless navigation to our
-              global services tailored for Africa’s growing needs.
+            <span className="font-extrabold"> Our Mission</span><br/>
+To equip Africa’s workforce and organisations with the knowledge, tools, and platforms required to thrive in an interconnected, technology driven global economy.
+            </p>
+          <p className="text-lg text-gray-600 mb-2">
+            <span className="font-extrabold"> Our Vision</span><br/>
+To become Africa’s most trusted partner in capacity building, strategic consultancy, and digital innovation fostering a new era of excellence, leadership, and global relevance across sectors.
+            </p>
+               <p className="text-lg text-gray-600 mb-2">
+            <span className="font-extrabold">A Trusted Bridge to Global Services</span><br/>
+T21 Services Nigeria is your gateway to a comprehensive suite of services powered by our global network. We deliver with precision, integrity, and purpose—meeting Africa’s urgent demand for talent, technology, and transformation.
             </p>
             {/* Button */}
             <div className="mt-4">
@@ -125,7 +123,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative md:w-1/2 mt-0 md:mt-0 h-fit">
+          <div className="relative md:w-1/2 mt-0 md:mt-0 md:h-[1000px]">
             <div
               className="relative z-10 top-40 w-32 h-32 rounded-full flex items-center justify-center"
               style={{
@@ -189,7 +187,6 @@ const Hero = () => {
           </div>
 
           <div className="bg-white p-2 rounded-[70px] max-h-[350px] min-h-[300px]  shadow-lg text-center card2 items-center justify-center grid overflow-hidden relative group">
-            {/* Upper Section */}
             <div className="bg-white/10 backdrop-blur-md rounded-[50px] min-h-[150px] h-fit w-[250px] p-2 z-10 relative transition-opacity duration-500 ease-in-out group-hover:opacity-0">
               <img
                 src={card1}
